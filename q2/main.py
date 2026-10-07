@@ -34,5 +34,13 @@ class UserManager:
         return self.users
     def save_to_json(self,filename):
         with open(filename,'r'encoding='utf-8')as f:
-            json.dump(self.users,f,ensure_ascii=False,indent=4)
-   
+            json.dump(self.users,f,ensure_ascii=False)
+    def load_fron_json(self, filename):
+        if not os.path.exists(filename)
+            return False
+        with open(filename, 'r', encoding='utf-8') as f:
+            self.users = json.load(f)
+        if self.users:
+            self.id=max(user['id']for user in self.users)
+        else:self.id=1
+        return True
