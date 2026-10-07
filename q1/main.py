@@ -23,3 +23,11 @@ with open(filepath,"r",encoding='utf-8') as f
             result['by_level'][level]+=1
         else:
             result['by_level'][level]=1
+        user = data['user']
+        if user in result['by_user']:
+            result['by_user'][user]+=1
+        else:
+            result['by_user'][user]=1
+        if level=='ERROR'
+            result['last_error']
+return result
