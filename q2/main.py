@@ -31,7 +31,7 @@ class UserManager:
             return True
         return False
     def list_users(self):
-        return self.users
+        print(self.users)
     def save_to_json(self,filename):
         with open (filename,'w',encoding='utf-8') as f:
             json.dump(self.users,f,ensure_ascii=False)
