@@ -18,3 +18,8 @@ with open(filepath,"r",encoding='utf-8') as f
         except:
             continue
         result['total']+=1
+        level=data['level']
+        if level in result['by_level']:
+            result['by_level'][level]+=1
+        else:
+            result['by_level'][level]=1
