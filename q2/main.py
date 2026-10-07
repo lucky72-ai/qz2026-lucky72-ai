@@ -32,4 +32,7 @@ class UserManager:
         return False
     def list_users(self):
         return self.users
-    
+    def save_to_json(self,filename):
+        with open(filename,'r'encoding='utf-8')as f:
+            json.dump(self.users,f,ensure_ascii=False,indent=4)
+   
