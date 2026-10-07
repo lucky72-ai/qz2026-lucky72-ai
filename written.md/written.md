@@ -202,7 +202,9 @@ logs = [
 3. 解释为什么第 2 问不能直接用 `len(logs)` 得到结果，需要什么遍历结构？
 
 （在此作答）
-
+1. find_error=[i for i in logs if i.get('level')=='ERROR']
+print(find_error)
+2. 
 ### 第 3 题：异常处理设计
 
 Day_10 中你写过 `safe_int(s)` 函数：能转就返回整数，不能转就返回 `None`。
