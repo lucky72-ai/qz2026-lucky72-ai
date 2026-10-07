@@ -7,3 +7,7 @@ def analyze_log(filepath: str) -> dict:
         "by_user":{},
         "last_error":""
     }
+if not os.path.exists(filepath)
+    return result
+with open(filepath,"r",encoding='utf-8') as f
+    
